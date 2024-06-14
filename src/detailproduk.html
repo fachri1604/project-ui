@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Detail Produk</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />    
+  </head>
+  <body class="bg-gray-100 p-6">
+    <header class="bg-white shadow">
+      <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-blue-500">Melicon</h1>
+        <nav>
+          <ul class="flex space-x-10">
+            <li>
+              <a
+                href="../src/index.html"
+                class="text-gray-600 hover:text-gray-800"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../src/produk.html"
+                class="text-gray-600 hover:text-gray-800"
+                >Produk</a
+              >
+            </li>
+            <li>
+              <a
+                href="../src/article.html"
+                class="text-gray-600 hover:text-gray-800"
+                >Article</a
+              >
+              <li>
+                <a href="../src/transaksi.html" class="text-gray-600 hover:text-gray-800">Transaksi</a>
+              </li>
+              <li>
+                <a href="../src/riwayat.html" class="text-gray-600 hover:text-gray-800">Riwayat</a>
+              </li>
+            </li>            
+          </ul>
+        </nav>
+      </div>
+    
+    <div class="container mx-auto">      
+      <a
+        href="produk.html"
+        class="text-blue-500"
+        >← Kembali ke Produk</a
+      >
+      <div class="mt-6 bg-white p-6 rounded-lg shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <img
+            id="product-image"
+            class="w-full object-cover rounded"
+            src="../img/hodie.jpg"
+            alt="Product Image"
+          />
+          <div class="flex flex-col justify-between">
+            <div>
+              <h2
+                id="product-name"
+                class="text-3xl font-bold mb-2"
+              >
+                Hodie hitam
+              </h2>
+              <div
+                itemprop="offers"
+                itemscope
+                itemtype="http://schema.org/Offer"
+              >
+                <div class="flex items-center space-x-2">
+                  <span
+                    id="PriceA11y"
+                    class="sr-only"
+                    >Regular price</span
+                  >
+                  <span
+                    id="ComparePrice"
+                    class="line-through text-gray-500"
+                    >495.000</span
+                  >
+                  <span
+                    id="ComparePriceA11y"
+                    class="sr-only"
+                    >Sale price</span
+                  >
+                  <span
+                    id="ProductPrice"
+                    class="text-red-500 text-xl font-bold"
+                    itemprop="price"
+                    content="220000.0"
+                    >220.000</span
+                  >
+                </div>
+                <meta
+                  itemprop="priceCurrency"
+                  content="IDR"
+                />
+                <link
+                  itemprop="availability"
+                  href="http://schema.org/InStock"
+                />
+              </div>
+              <hr class="my-4" />
+              <form
+                method="post"
+                action="/cart/add"
+                id="AddToCartForm--product-template"
+                accept-charset="UTF-8"
+                class="space-y-4"
+                enctype="multipart/form-data"
+                data-product-form
+              >
+                <input
+                  type="hidden"
+                  name="form_type"
+                  value="product"
+                />
+                <input
+                  type="hidden"
+                  name="utf8"
+                  value="✓"
+                />
+                <div class="space-y-2">
+                  <label
+                    for="ProductSelect-option-0"
+                    class="block text-sm font-medium text-gray-700"
+                    >Warna</label
+                  >
+                  <fieldset
+                    id="ProductSelect-option-0"
+                    class="flex items-center space-x-4"
+                  >
+                    <label class="flex items-center">
+                      <input
+                        type="radio"
+                        checked
+                        value="BLACK"
+                        data-index="option1"
+                        name="option1"
+                        class="form-radio h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                      />
+                      <span class="ml-2">BLACK</span>
+                    </label>
+                  </fieldset>
+                </div>
+                <div class="space-y-2">
+                  <label
+                    for="ProductSelect-option-1"
+                    class="block text-sm font-medium text-gray-700"
+                    >Ukuran</label
+                  >
+                  <fieldset
+                    id="ProductSelect-option-1"
+                    class="flex flex-wrap items-center space-x-4"
+                  >
+                    <label class="flex items-center">
+                      <input
+                        type="radio"
+                        checked
+                        value="S"
+                        data-index="option2"
+                        name="option2"
+                        class="form-radio h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                      />
+                      <span class="ml-2">S</span>
+                    </label>
+                    <label class="flex items-center">
+                      <input
+                        type="radio"
+                        value="M"
+                        data-index="option2"
+                        name="option2"
+                        class="form-radio h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                      />
+                      <span class="ml-2">M</span>
+                    </label>
+                    <label class="flex items-center">
+                      <input
+                        type="radio"
+                        value="L"
+                        data-index="option2"
+                        name="option2"
+                        class="form-radio h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                      />
+                      <span class="ml-2">L</span>
+                    </label>
+                    <label class="flex items-center">
+                      <input
+                        type="radio"
+                        value="XL"
+                        data-index="option2"
+                        name="option2"
+                        class="form-radio h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                      />
+                      <span class="ml-2">XL</span>
+                    </label>
+                    <label class="flex items-center">
+                      <input
+                        type="radio"
+                        value="XXL"
+                        data-index="option2"
+                        name="option2"
+                        class="form-radio h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                      />
+                      <span class="ml-2">XXL</span>
+                    </label>
+                  </fieldset>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <label
+                    for="Quantity"
+                    class="block text-sm font-medium text-gray-700"
+                    >Quantity</label
+                  >
+                  <input
+                    type="number"
+                    id="Quantity"
+                    name="quantity"
+                    value="1"
+                    min="1"
+                    class="form-input mt-1 block w-24 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  />
+                </div>
+                <div class="mt-4">
+                   <a href="./transaksi.html"
+                    class="w-full p-14 bg-blue-500 text-white py-2 rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    Add to Cart
+                  </a>
+                </div>
+                <div
+                  class="product-single__description rte"
+                  itemprop="description"
+                >
+                  <p index="0"><br /><br />CALE BLACK adalah</p>
+                  <p class="irIKAp">
+                    Jacket Pria dan wanita yang dibuat dari bahan berkualitas tinggi dan nyaman dipakai sepanjang hari. dengan type flight jacket berbahan polyester cocok digunakan untuk segala kondisi suhu dan nyaman digunakan untuk
+                    aktivasi sehari-hari.
+                  </p>
+                  <p index="0">
+                    <br /><br />Material:<br />Polyester <br /><br />Size Chart : <br /><br />(S) Lebar Dada 52 cm, Tinggi Belakang 60 cm, Panjang Lengan 63 cm<br /><br />(M) Lebar Dada 54 cm, Tinggi Belakang 65 cm, Panjang Lengan 67 cm<br /><br />(L)
+                    Lebar Dada 55 cm, Tinggi Belakang 66 cm, Panjang Lengan 69 cm<br /><br />(XL) Lebar Dada 60 cm, Tinggi Belakang 69 cm, Panjang Lengan 74 cm<br /><br />(XXL) Lebar Dada 62 cm, Tinggi Belakang 71 cm, Panjang Lengan 74
+                    cm<br /><br />*Akan ada selisih 1-2 cm antara size chart dengan items actual bisa saja terjadi, <br />Ini biasanya di karenakan proses pengembangan produksi.<br /><br />Cara perawatan:<br />- Untuk pemakaian lebih lama
+                    disarankan pencucian menggunakan handwash.<br /><br />
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </header>
+    <footer class="bg-blue-800 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Toko Baju. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

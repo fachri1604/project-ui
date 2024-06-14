@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/output.css" />
+  </head>
+  <body>
+    <header class="bg-white shadow">
+      <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-blue-500">Melicon</h1>
+        <nav>
+          <ul class="flex space-x-10">
+            <li>
+              <a
+                href="../src/index.html"
+                class="text-gray-600 hover:text-gray-800"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../src/produk.html"
+                class="text-gray-600 hover:text-gray-800"
+                >Produk</a
+              >
+            </li>
+            <li>
+              <a
+                href="../src/article.html"
+                class="text-gray-600 hover:text-gray-800"
+                >Article</a
+              >
+              <li>
+                <a href="../src/transaksi.html" class="text-gray-600 hover:text-gray-800">Transaksi</a>
+              </li>
+              <li>
+                <a href="../src/riwayat.html" class="text-gray-600 hover:text-gray-800">Riwayat</a>
+              </li>
+            </li>            
+          </ul>
+        </nav>
+      </div>
+<!--header-->
+<!--berita-->
+  <div class="container mx-auto">
+    <h1 class="text-3xl font-bold mb-6"></h1>
+    <div id="article-archive" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Article 1 -->
+      <article onclick="showDetail('article1')" class="cursor-pointer overflow-hidden rounded-lg shadow transition hover:shadow-lg bg-white">
+        <img
+          alt=""
+          src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+          class="h-48 w-full object-cover"
+        />
+        <div class="p-4">
+          <time datetime="2022-10-10" class="block text-xs text-gray-500"> 10th Oct 2022 </time>
+          <h3 class="mt-0.5 text-lg text-gray-900">How to position your furniture for positivity</h3>
+          <p class="mt-2 line-clamp-3 text-sm text-gray-500">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem...
+          </p>
+        </div>
+      </article>      
+      <article onclick="showDetail('article2')" class="cursor-pointer overflow-hidden rounded-lg shadow transition hover:shadow-lg bg-white">
+        <img
+          alt=""
+          src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+          class="h-48 w-full object-cover"
+        />
+        <div class="p-4">
+          <time datetime="2022-10-10" class="block text-xs text-gray-500"> 11th Oct 2022 </time>
+          <h3 class="mt-0.5 text-lg text-gray-900">How to position your furniture for positivity</h3>
+          <p class="mt-2 line-clamp-3 text-sm text-gray-500">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem...
+          </p>
+        </div>
+      </article>
+      <article onclick="showDetail('article3')" class="cursor-pointer overflow-hidden rounded-lg shadow transition hover:shadow-lg bg-white">
+        <img
+          alt=""
+          src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+          class="h-48 w-full object-cover"
+        />
+        <div class="p-4">
+          <time datetime="2022-10-10" class="block text-xs text-gray-500"> 13th Oct 2022 </time>
+          <h3 class="mt-0.5 text-lg text-gray-900">How to position your furniture for positivity</h3>
+          <p class="mt-2 line-clamp-3 text-sm text-gray-500">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem...
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Detail Article Section -->
+    <div id="article-detail" class="hidden mt-6 bg-white p-6 rounded-lg shadow-lg">
+      <img
+        id="detail-img"
+        alt=""
+        src=""
+        class="w-full h-64 object-cover rounded"
+      />
+      <div class="mt-6">
+        <time id="detail-date" datetime="" class="block text-sm text-gray-500"> </time>
+        <h1 id="detail-title" class="text-2xl font-bold text-gray-900 mt-2"></h1>
+        <p id="detail-content" class="mt-4 text-gray-700">
+        </p>
+        <button onclick="hideDetail()" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Kembali</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const articles = {
+      article1: {
+        img: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        date: "10th Oct 2022",
+        title: "How to position your furniture for positivity",
+        content: `
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?
+        `
+      },
+      article2: {
+        img: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        date: "11th Oct 2022",
+        title: "How to position your furniture for positivity",
+        content: `
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?
+        `
+      },
+      article3: {
+        img: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        date: "12th Oct 2022",
+        title: "How to position your furniture for positivity",
+        content: `
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?
+        `
+      }
+      
+    };
+
+    function showDetail(articleId) {
+      const article = articles[articleId];
+      document.getElementById('detail-img').src = article.img;
+      document.getElementById('detail-date').innerText = article.date;
+      document.getElementById('detail-title').innerText = article.title;
+      document.getElementById('detail-content').innerText = article.content;
+      document.getElementById('article-archive').classList.add('hidden');
+      document.getElementById('article-detail').classList.remove('hidden');
+    }
+
+    function hideDetail() {
+      document.getElementById('article-archive').classList.remove('hidden');
+      document.getElementById('article-detail').classList.add('hidden');
+    }
+  </script>
+
+  <!--akhir berita-->
+<!--footer-->
+     <div class="mt-32 sm:mt-48 lg:mt-64">
+            <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+              <p class="text-sm text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <footer class="bg-blue-800 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Toko Baju. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
